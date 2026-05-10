@@ -1,0 +1,86 @@
+<view class="signup-page">
+  <!-- Header -->
+  <view class="su-header safe-top">
+    <view class="su-header-left">
+      <view class="su-back" bindtap="goBack">
+        <text class="su-back-icon">⬅️</text>
+      </view>
+      <text class="su-header-title">组一波</text>
+    </view>
+    <view class="su-points"><text class="su-points-text">1250 PTS</text></view>
+  </view>
+
+  <!-- Hero -->
+  <view class="su-hero">
+    <image class="su-hero-img" src="{{heroImg}}" mode="aspectFill" />
+    <view class="su-hero-overlay"></view>
+    <view class="su-hero-content">
+      <view class="su-hero-badge"><text>即将开始</text></view>
+      <text class="su-hero-title">洛克公园 - <text class="su-hero-highlight">旗舰馆</text></text>
+      <text class="su-hero-time">{{activity.time}}</text>
+    </view>
+  </view>
+
+  <view class="su-content">
+    <!-- 地点 -->
+    <view class="su-card">
+      <view class="su-card-head">
+        <text class="su-card-title">📍 地点详情</text>
+        <text class="su-card-dist">{{activity.distance || '2.4KM'}}</text>
+      </view>
+      <view class="su-map"><image class="su-map-img" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800" mode="aspectFill" /></view>
+      <text class="su-addr">{{activity.address || '静安区汶水路210号, 3号场地 (室内全场)'}}</text>
+    </view>
+
+    <!-- 组织者 -->
+    <view wx:if="{{activity.organizer}}" class="su-card">
+      <text class="su-card-title">🏃 组织者</text>
+      <view class="su-org">
+        <image class="su-org-avatar" src="{{activity.organizer.avatar}}" />
+        <view class="su-org-info">
+          <text class="su-org-name">{{activity.organizer.name}}</text>
+          <view class="su-org-tags">
+            <view class="su-tag su-tag-pos"><text>{{activity.organizer.position}}</text></view>
+            <view class="su-tag su-tag-mvp"><text>MVP x{{activity.organizer.mvpCount}}</text></view>
+          </view>
+        </view>
+      </view>
+      <view class="su-rules">
+        <text class="su-rules-label">本场规则</text>
+        <text class="su-rules-text">{{activity.rules || '"半场 4V4, 先到11分换人。尊重裁判，杜绝脏动作。"'}}</text>
+      </view>
+    </view>
+
+    <!-- 报名人员 -->
+    <view class="su-card">
+      <view class="su-card-head">
+        <text class="su-card-title">👥 已报名人员 ({{activity.joinedPlayersCount}}/{{activity.maxPlayersCount}})</text>
+        <view class="su-progress"><view class="su-progress-fill" style="width:{{progress}}%"></view></view>
+      </view>
+      <view class="su-players">
+        <view wx:for="{{activity.players}}" wx:key="id" class="su-player">
+          <image class="su-player-avatar" src="{{item.avatar}}" />
+          <text class="su-player-name">{{item.name}}</text>
+        </view>
+        <block wx:for="{{emptySlots}}" wx:key="*this">
+          <view class="su-player su-player-empty">
+            <view class="su-player-ph"><text>➕</text></view>
+            <text class="su-player-name">待定</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <!-- 诚信提示 -->
+    <view class="su-penalty">
+      <text class="su-penalty-icon">⚠️</text>
+      <view>
+        <text class="su-penalty-title">诚信提示</text>
+        <text class="su-penalty-desc">严禁放鸽子。缺席将扣除 <text class="su-penalty-hl">-5 PTS</text>，累计 3 次将限制参加后续活动。</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="su-action"><button class="su-action-btn">立即报名</button></view>
+</view>

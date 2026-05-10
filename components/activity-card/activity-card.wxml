@@ -1,0 +1,65 @@
+<view class="activity-card" data-id="{{activity.id}}" bindtap="onClick">
+  <view class="activity-left-bar {{activity.status === 'registering' ? 'active' : ''}}"></view>
+  <view class="activity-card-inner">
+    <view class="activity-top">
+      <view class="activity-info">
+        <text class="activity-title">{{activity.title}}</text>
+        <view class="activity-location">
+          <text class="activity-location-icon">📍</text>
+          <text class="activity-location-text">{{activity.location}}</text>
+        </view>
+      </view>
+      <view class="activity-badge {{'badge-' + activity.status}}">
+        <text wx:if="{{activity.status === 'registering'}}">报名中</text>
+        <text wx:elif="{{activity.status === 'upcoming'}}">即将开始</text>
+        <text wx:else>已结束</text>
+      </view>
+    </view>
+
+    <view wx:if="{{activity.status === 'ended' && activity.matchResult}}" class="match-result">
+      <view class="match-result-inner">
+        <image class="match-result-avatar" src="{{activity.matchResult.teamAAvatar}}" />
+        <text class="match-result-score">{{activity.matchResult.teamAScore}} - {{activity.matchResult.teamBScore}}</text>
+        <image class="match-result-avatar" src="{{activity.matchResult.teamBAvatar}}" />
+      </view>
+      <view class="match-result-label">
+        <text>完赛</text>
+        <text>分数</text>
+      </view>
+    </view>
+
+    <view wx:else class="activity-details">
+      <view class="detail-item">
+        <text class="detail-icon">📅</text>
+        <view class="detail-text-wrap">
+          <text class="detail-label">时间</text>
+          <text class="detail-value">{{activity.time}}</text>
+        </view>
+      </view>
+      <view class="detail-item">
+        <text class="detail-icon">💳</text>
+        <view class="detail-text-wrap">
+          <text class="detail-label">费用</text>
+          <text class="detail-value">{{activity.cost}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="activity-footer">
+      <view class="player-avatars">
+        <image wx:for="{{activity.players.slice(0,3)}}" wx:key="id" class="player-avatar" src="{{item.avatar}}" />
+        <view wx:if="{{activity.joinedPlayersCount > activity.players.length}}" class="player-avatar-more">
+          <text>+{{activity.joinedPlayersCount - activity.players.length}}</text>
+        </view>
+      </view>
+      <view class="player-count">
+        <text class="player-count-num">{{activity.joinedPlayersCount}}</text>
+        <text class="player-count-total"> / {{activity.maxPlayersCount}}</text>
+      </view>
+    </view>
+
+    <view class="progress-bar">
+      <view class="progress-fill {{activity.joinedPlayersCount >= activity.maxPlayersCount ? 'fill-full' : ''}}" style="width:{{(activity.joinedPlayersCount / activity.maxPlayersCount) * 100}}%"></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+.pf-page { min-height: 100vh; background: var(--color-surface); padding-bottom: 160rpx; }
+.pf-header {
+  display: flex; justify-content: space-between; align-items: center; padding: 20rpx 32rpx 16rpx;
+  position: sticky; top: 0; z-index: 50; background: rgba(245,240,235,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.pf-header-left { display: flex; align-items: center; gap: 12rpx; }
+.pf-avatar { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-primary-container); }
+.pf-avatar-img { width: 100%; height: 100%; }
+.pf-title { font-size: 40rpx; color: var(--color-primary); font-weight: 800; letter-spacing: -0.04em; text-transform: uppercase; }
+.pf-points { display: flex; align-items: center; gap: 4rpx; background: var(--color-surface-container-high); padding: 8rpx 14rpx; border-radius: 12rpx; border: 1px solid rgba(0,0,0,0.05); }
+.pf-star { font-size: 20rpx; }
+.pf-points-text { font-size: 14px; font-weight: 700; }
+
+.pf-content { padding: 32rpx 32rpx 0; display: flex; flex-direction: column; gap: 28rpx; }
+
+.pf-user { display: flex; justify-content: space-between; align-items: flex-end; }
+.pf-user-name { font-size: 56rpx; font-weight: 700; text-transform: uppercase; line-height: 1; display: block; }
+.pf-user-meta { font-size: 18rpx; color: var(--color-secondary); font-weight: 500; margin-top: 6rpx; display: block; }
+.pf-user-pts { text-align: right; }
+.pf-user-pts-label { font-size: 14px; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 4rpx; }
+.pf-user-pts-num { font-size: 80rpx; color: var(--color-primary-container); line-height: 1; font-weight: 700; }
+
+.pf-card { background: var(--color-surface-container); border-radius: 20rpx; padding: 20rpx; border: 1px solid rgba(0,0,0,0.05); }
+.pf-card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16rpx; }
+.pf-card-title { font-size: 28rpx; font-weight: 700; display: block; margin-bottom: 16rpx; }
+.pf-card-head .pf-card-title { margin-bottom: 0; }
+.pf-warn-icon { font-size: 24rpx; }
+
+.pf-flaking-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10rpx; }
+.pf-flaking-status { font-size: 14px; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+.pf-flaking-warn { font-size: 14px; font-weight: 700; color: var(--color-error); text-transform: uppercase; letter-spacing: 0.06em; }
+.pf-flaking-bar { width: 100%; height: 8px; background: var(--color-surface-container-highest); border-radius: 6px; overflow: hidden; }
+.pf-flaking-fill { height: 100%; background: linear-gradient(90deg, var(--color-error), var(--color-primary-container)); border-radius: 6px; }
+.pf-flaking-quote { margin-top: 16rpx; padding: 14rpx; background: rgba(220,53,69,0.04); border-left: 4px solid var(--color-error); border-radius: 8rpx; }
+.pf-flaking-quote text { font-size: 18rpx; color: var(--color-secondary); font-weight: 500; font-style: italic; line-height: 1.5; }
+
+.pf-history-item { display: flex; justify-content: space-between; align-items: center; padding: 16rpx 0; }
+.pf-history-item.has-border { border-bottom: 1px solid rgba(0,0,0,0.05); }
+.pf-history-match { font-size: 18px; font-weight: 700; display: block; }
+.pf-history-reason { font-size: 14px; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-top: 2rpx; }
+.pf-history-pts { font-size: 34rpx; font-weight: 700; }
+.pf-history-pts.plus { color: var(--color-primary); }
+.pf-history-pts.minus { color: var(--color-error); }
+
+.pf-links { display: flex; flex-direction: column; gap: 12rpx; }
+.pf-link { display: flex; align-items: center; gap: 16rpx; background: var(--color-surface-container); border-radius: 20rpx; padding: 16rpx; border: 1px solid rgba(0,0,0,0.05); }
+.pf-link-icon { width: 44px; height: 44px; border-radius: 12rpx; display: flex; align-items: center; justify-content: center; font-size: 28rpx; }
+.pf-link-icon.orange { background: rgba(255,107,0,0.1); }
+.pf-link-icon.dark { background: rgba(51,51,51,0.1); }
+.pf-link-icon.gray { background: rgba(102,102,102,0.1); }
+.pf-link-label { flex: 1; font-size: 24rpx; font-weight: 700; }
+.pf-link-arrow { font-size: 24rpx; color: rgba(102,102,102,0.4); }
+
+.pf-logout {
+  width: 100%; padding: 20rpx; border-radius: 20rpx; border: 2px solid rgba(0,0,0,0.05);
+  color: var(--color-secondary); font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.12em;
+  background: transparent; line-height: 1; margin-top: 16rpx;
+}

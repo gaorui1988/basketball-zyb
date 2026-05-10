@@ -1,0 +1,38 @@
+.index-page {
+  min-height: 100vh;
+  background: var(--color-surface);
+  padding-bottom: 160rpx;
+}
+.index-content { padding: 24rpx 32rpx 0; }
+
+.filter-tabs {
+  display: flex; gap: 24rpx; margin-bottom: 32rpx;
+}
+.filter-tab { position: relative; padding-bottom: 10rpx; }
+.filter-tab-text {
+  font-size: 36rpx; font-weight: 700;
+  color: rgba(102, 102, 102, 0.6);
+}
+.filter-tab.active .filter-tab-text { color: var(--color-on-surface); }
+.filter-tab-indicator {
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+  background: var(--color-primary-container); border-radius: 4px;
+}
+
+.activity-list { display: flex; flex-direction: column; gap: 24rpx; }
+
+/* 头部的样式 */
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20rpx 32rpx 16rpx;
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(245, 240, 235, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.header-left { display: flex; align-items: center; gap: 12rpx; }
+.header-avatar { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; background: #ddd8d2; border: 1px solid rgba(0,0,0,0.05); }
+.header-avatar-img { width: 100%; height: 100%; }
+.header-title { font-size: 36rpx; letter-spacing: -0.04em; color: var(--color-primary); font-weight: 800; text-transform: uppercase; }
+.header-points { padding: 8rpx 14rpx; background: var(--color-surface-container-high); border-radius: 12rpx; display: flex; align-items: center; gap: 6rpx; border: 1px solid rgba(0,0,0,0.05); }
+.header-points-icon { font-size: 22rpx; }
+.header-points-text { font-size: 14px; font-weight: 700; color: var(--color-primary-container); }

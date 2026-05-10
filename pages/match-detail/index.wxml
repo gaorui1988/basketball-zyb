@@ -1,0 +1,70 @@
+<view class="md-page">
+  <!-- Header -->
+  <view class="md-header safe-top">
+    <view class="md-header-left">
+      <view class="md-back" bindtap="goBack"><text class="md-back-icon">⬅️</text></view>
+      <text class="md-header-title">组一波</text>
+    </view>
+    <view class="md-points"><text class="md-points-text">1250 PTS</text></view>
+  </view>
+
+  <!-- 比分摘要 -->
+  <view class="md-summary">
+    <view class="md-summary-top">
+      <view class="md-summary-badge"><text>比赛结束</text></view>
+      <view class="md-summary-meta">
+        <text class="md-summary-court">{{result.courtNo}}</text>
+        <text class="md-summary-title">{{activity.title}}</text>
+      </view>
+    </view>
+    <view class="md-scoreboard">
+      <view class="md-team">
+        <view class="md-team-avatar-wrap"><image class="md-team-avatar" src="{{result.teamAAvatar}}" /></view>
+        <text class="md-team-label">A 队</text>
+      </view>
+      <view class="md-score-center">
+        <text class="md-score">{{result.teamAScore}} - {{result.teamBScore}}</text>
+        <text class="md-score-label">完赛比分</text>
+      </view>
+      <view class="md-team">
+        <view class="md-team-avatar-wrap"><image class="md-team-avatar" src="{{result.teamBAvatar}}" /></view>
+        <text class="md-team-label">B 队</text>
+      </view>
+    </view>
+    <view class="md-points-notice">
+      <text class="md-points-notice-icon">🏅</text>
+      <text class="md-points-notice-text">好球！你因为参加本次活动获得了 <text class="md-points-hl">+5 积分</text>。</text>
+    </view>
+  </view>
+
+  <!-- MVP 投票 -->
+  <view class="md-vote-section">
+    <view class="md-vote-header">
+      <view>
+        <text class="md-vote-title">投票选出 MVP</text>
+        <text class="md-vote-subtitle">谁统治了今天的球场？</text>
+      </view>
+      <text class="md-vote-star">⭐</text>
+    </view>
+    <view class="md-vote-list">
+      <view wx:for="{{participants}}" wx:key="id" class="md-vote-item {{item.isCurrentUser ? 'disabled' : ''}}">
+        <view class="md-vote-player">
+          <view class="md-vote-avatar-wrap">
+            <image class="md-vote-avatar" src="{{item.avatar}}" />
+            <view wx:if="{{item.position}}" class="md-vote-pos"><text>{{item.position}}</text></view>
+          </view>
+          <view>
+            <text class="md-vote-name">{{item.name}}</text>
+            <text class="md-vote-stats">{{item.stats.pts}} 得分 • {{item.stats.ast}} 助攻 • {{item.stats.reb}} 篮板</text>
+          </view>
+        </view>
+        <text wx:if="{{item.isCurrentUser}}" class="md-vote-self">自己</text>
+        <button wx:else class="md-vote-btn">投票</button>
+      </view>
+    </view>
+    <view class="md-vote-info">
+      <text class="md-vote-info-icon">📋</text>
+      <text class="md-vote-info-text">如果没有人投票，本次比赛将不会选出 MVP。每一票对排行榜都很重要！</text>
+    </view>
+  </view>
+</view>

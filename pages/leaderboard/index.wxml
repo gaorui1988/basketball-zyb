@@ -1,0 +1,52 @@
+<view class="lb-page">
+  <!-- Header -->
+  <view class="lb-header safe-top">
+    <view class="lb-header-left">
+      <view class="lb-avatar"><image class="lb-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZsANlmkDCqQIhgjzRdnR1isRPuU6B33edMCWJE8tDG3eJWfQN4NqEfj5kgLC7vHfM5XE9vJCrmeItahbhnk1ibAJXho54ttO-7bYGjkzY0j9WKeXDF-IFhTzQSv8sY4WDw7DalFmqNLvXR1z2DsezmSz9NH2AH9ea99gdXnPkGoPXzqwYsEItvz19353rwit9Q0De935Npu2EHhzAhElAi1VWnImldh9Pv0dpX-ImPdsoFG0CayO5uEUVNd0qGWh74wrDNskgURv8" /></view>
+      <text class="lb-title">积分排行榜</text>
+    </view>
+    <view class="lb-points"><text class="lb-star">⭐</text><text class="lb-points-text">1250 PTS</text></view>
+  </view>
+
+  <!-- 领奖台 -->
+  <view class="lb-podium">
+    <view class="podium-item">
+      <view class="podium-avatar silver"><image class="podium-avatar-img" src="{{topThree[1].avatar}}" /></view>
+      <view class="podium-rank silver-bg">2</view>
+      <text class="podium-name">{{topThree[1].name}}</text>
+      <text class="podium-pts">{{topThree[1].pts}} PTS</text>
+    </view>
+    <view class="podium-item first">
+      <text class="podium-trophy">🏆</text>
+      <view class="podium-avatar gold"><image class="podium-avatar-img" src="{{topThree[0].avatar}}" /></view>
+      <view class="podium-rank gold-bg">1</view>
+      <text class="podium-name gold-name">{{topThree[0].name}}</text>
+      <text class="podium-pts gold-pts">{{topThree[0].pts}} PTS</text>
+    </view>
+    <view class="podium-item">
+      <view class="podium-avatar bronze"><image class="podium-avatar-img" src="{{topThree[2].avatar}}" /></view>
+      <view class="podium-rank bronze-bg">3</view>
+      <text class="podium-name">{{topThree[2].name}}</text>
+      <text class="podium-pts">{{topThree[2].pts}} PTS</text>
+    </view>
+  </view>
+
+  <!-- 排行榜列表 -->
+  <view class="lb-list">
+    <view wx:for="{{rest}}" wx:key="id" class="lb-item {{item.isCurrentUser ? 'me' : ''}}">
+      <text class="lb-rank">{{item.rank}}</text>
+      <view class="lb-avatar-sm {{item.isCurrentUser ? 'hl' : ''}}"><image class="lb-avatar-sm-img" src="{{item.avatar}}" /></view>
+      <view class="lb-info">
+        <view class="lb-name-row">
+          <text class="lb-name">{{item.name}}</text>
+          <view wx:if="{{item.isCurrentUser}}" class="lb-me-badge"><text>你</text></view>
+        </view>
+        <text class="lb-mvp">MVP x{{item.mvpCount}}</text>
+      </view>
+      <view class="lb-pts-wrap">
+        <text class="lb-pts-num">{{item.pts}}</text>
+        <text class="lb-pts-label">积分</text>
+      </view>
+    </view>
+  </view>
+</view>

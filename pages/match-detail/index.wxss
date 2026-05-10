@@ -1,0 +1,56 @@
+.md-page { min-height: 100vh; background: var(--color-surface); padding-bottom: 160rpx; }
+
+.md-header {
+  display: flex; justify-content: space-between; align-items: center; padding: 20rpx 32rpx 16rpx;
+  position: sticky; top: 0; z-index: 50; background: rgba(245,240,235,0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.md-header-left { display: flex; align-items: center; gap: 16rpx; }
+.md-back-icon { font-size: 30rpx; }
+.md-header-title { font-size: 36rpx; color: var(--color-primary); font-weight: 800; letter-spacing: -0.04em; text-transform: uppercase; }
+.md-points { padding: 8rpx 14rpx; background: var(--color-surface-container-high); border-radius: 12rpx; border: 1px solid rgba(0,0,0,0.05); }
+.md-points-text { font-size: 14px; font-weight: 700; color: var(--color-primary-container); letter-spacing: 0.04em; }
+
+.md-summary { margin: 24rpx 32rpx; padding: 28rpx; background: var(--color-surface-container-high); border-radius: 20rpx; border: 1px solid rgba(0,0,0,0.05); }
+.md-summary-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28rpx; }
+.md-summary-badge { padding: 6rpx 14rpx; background: var(--color-secondary-container); border-radius: 20rpx; }
+.md-summary-badge text { font-size: 14px; font-weight: 700; color: var(--color-on-secondary-container); letter-spacing: 0.06em; text-transform: uppercase; }
+.md-summary-meta { text-align: right; }
+.md-summary-court { font-size: 14px; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.06em; display: block; }
+.md-summary-title { font-size: 28rpx; font-weight: 700; display: block; }
+
+.md-scoreboard { display: flex; align-items: center; justify-content: space-around; padding: 20rpx 0; }
+.md-team { display: flex; flex-direction: column; align-items: center; gap: 10rpx; }
+.md-team-avatar-wrap { width: 80px; height: 80px; border-radius: 50%; border: 4px solid rgba(255,107,0,0.15); overflow: hidden; background: white; }
+.md-team-avatar { width: 100%; height: 100%; }
+.md-team-label { font-size: 28rpx; font-weight: 700; }
+.md-score-center { display: flex; flex-direction: column; align-items: center; }
+.md-score { font-size: 68rpx; color: var(--color-primary-container); letter-spacing: 0.04em; font-weight: 700; }
+.md-score-label { font-size: 14px; font-weight: 700; color: var(--color-secondary); letter-spacing: 0.08em; margin-top: 6rpx; text-transform: uppercase; }
+
+.md-points-notice { display: flex; align-items: center; gap: 12rpx; margin-top: 24rpx; padding: 14rpx; background: rgba(255,107,0,0.08); border: 1px solid rgba(255,107,0,0.15); border-radius: 12rpx; }
+.md-points-notice-icon { font-size: 26rpx; }
+.md-points-notice-text { font-size: 18rpx; color: var(--color-primary); font-weight: 500; }
+.md-points-hl { font-weight: 700; text-decoration: underline; }
+
+.md-vote-section { padding: 0 32rpx; }
+.md-vote-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20rpx; }
+.md-vote-title { font-size: 42rpx; font-weight: 700; letter-spacing: -0.02em; text-transform: uppercase; display: block; line-height: 1.1; }
+.md-vote-subtitle { font-size: 18rpx; color: var(--color-secondary); font-weight: 500; margin-top: 4rpx; display: block; }
+.md-vote-star { font-size: 32rpx; }
+.md-vote-list { display: flex; flex-direction: column; gap: 12rpx; }
+.md-vote-item { display: flex; align-items: center; justify-content: space-between; padding: 16rpx; background: var(--color-surface-container); border-radius: 20rpx; border: 1px solid rgba(0,0,0,0.05); }
+.md-vote-item.disabled { background: var(--color-surface-container-low); opacity: 0.6; }
+.md-vote-player { display: flex; align-items: center; gap: 16rpx; }
+.md-vote-avatar-wrap { position: relative; }
+.md-vote-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--color-surface-container-highest); }
+.md-vote-pos { position: absolute; bottom: -4px; right: -4px; width: 20px; height: 20px; background: var(--color-tertiary-container); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-surface); }
+.md-vote-pos text { font-size: 12px; font-weight: 700; color: white; }
+.md-vote-name { font-size: 24rpx; font-weight: 700; display: block; }
+.md-vote-stats { font-size: 14px; font-weight: 700; color: var(--color-secondary); letter-spacing: 0.04em; text-transform: uppercase; display: block; }
+.md-vote-self { font-size: 14px; font-weight: 700; color: var(--color-secondary); padding: 0 16rpx; text-transform: uppercase; letter-spacing: 0.08em; }
+.md-vote-btn { padding: 10rpx 24rpx; background: var(--color-primary-container); color: white; font-size: 18rpx; font-weight: 700; border-radius: 12rpx; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1; }
+
+.md-vote-info { margin-top: 32rpx; padding: 28rpx 24rpx; background: rgba(245,240,235,0.5); border: 2px dashed rgba(0,0,0,0.05); border-radius: 24rpx; text-align: center; }
+.md-vote-info-icon { font-size: 40rpx; display: block; margin-bottom: 12rpx; }
+.md-vote-info-text { font-size: 18rpx; color: var(--color-secondary); font-weight: 500; max-width: 400rpx; margin: 0 auto; line-height: 1.5; display: block; }

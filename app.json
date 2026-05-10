@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/signup/index",
+    "pages/match-detail/index",
+    "pages/leaderboard/index",
+    "pages/profile/index"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#f5f0eb"
+  },
+  "tabBar": {
+    "color": "#8a8580",
+    "selectedColor": "#ff6b00",
+    "backgroundColor": "#f5f0eb",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath": "images/basketball.png",
+        "selectedIconPath": "images/basketball-active.png"
+      },
+      {
+        "pagePath": "pages/leaderboard/index",
+        "text": "排行榜",
+        "iconPath": "images/trophy.png",
+        "selectedIconPath": "images/trophy-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-active.png"
+      }
+    ]
+  },
+  "useExtendedLib": {},
+  "requiredPrivateInfos": [],
+  "permission": {}
+}

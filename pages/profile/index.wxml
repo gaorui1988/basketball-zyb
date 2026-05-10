@@ -1,0 +1,61 @@
+<view class="pf-page">
+  <!-- Header -->
+  <view class="pf-header safe-top">
+    <view class="pf-header-left">
+      <view class="pf-avatar"><image class="pf-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgizM9toDHYAxBiM6x7ADROoKITXpnrYrw4NPElYG7l8Gx-giaAhvwlBoN1K4Bvw_PbzpqYF0JtebstrdpnYVsuwq6bPaP-UoQ90reCI4l35tbJ0rWnpnNfZbDDS9Y6XXy9bF16U0C1TBkpMTNd6xNJNo1t5EnzLID-dHFuLqFcORloGuVv0yE8ZC5OGZn6gHUlyzhKLXX1LYl5mtywy1ASaIxEQtD3vYVweDt88kGh_hz8v2FY2X6ACyID6JuQIJEJYbRsRqiHfX0" /></view>
+      <text class="pf-title">组一波</text>
+    </view>
+    <view class="pf-points"><text class="pf-star">⭐</text><text class="pf-points-text">1250 PTS</text></view>
+  </view>
+
+  <view class="pf-content">
+    <!-- 用户信息 -->
+    <view class="pf-user anim-slide-left">
+      <view>
+        <text class="pf-user-name">科比铁粉24</text>
+        <text class="pf-user-meta">2023年7月加入 • 前锋</text>
+      </view>
+      <view class="pf-user-pts">
+        <text class="pf-user-pts-label">本场积分</text>
+        <text class="pf-user-pts-num">20</text>
+      </view>
+    </view>
+
+    <!-- 缺席统计 -->
+    <view class="pf-card anim-fade">
+      <view class="pf-card-head">
+        <text class="pf-card-title">缺席统计</text>
+        <text class="pf-warn-icon">⚠️</text>
+      </view>
+      <view class="pf-flaking">
+        <view class="pf-flaking-top">
+          <text class="pf-flaking-status">当前状态: 1/3 次</text>
+          <text class="pf-flaking-warn">警告</text>
+        </view>
+        <view class="pf-flaking-bar"><view class="pf-flaking-fill" style="width:33.33%"></view></view>
+        <view class="pf-flaking-quote"><text>"再缺席 2 次，下次活动你就要请全队喝水了！"</text></view>
+      </view>
+    </view>
+
+    <!-- 积分历史 -->
+    <view class="pf-card anim-fade">
+      <text class="pf-card-title">🕐 积分历史</text>
+      <view class="pf-history">
+        <view wx:for="{{history}}" wx:key="id" class="pf-history-item {{index < history.length - 1 ? 'has-border' : ''}}">
+          <view><text class="pf-history-match">{{item.matchName}}</text><text class="pf-history-reason">{{item.reason}}</text></view>
+          <text class="pf-history-pts {{item.type === 'plus' ? 'plus' : 'minus'}}">{{item.type === 'plus' ? '+' : '-'}}{{item.points}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 快捷入口 -->
+    <view class="pf-links">
+      <view class="pf-link"><view class="pf-link-icon orange">🏀</view><text class="pf-link-label">我的活动</text><text class="pf-link-arrow">➡️</text></view>
+      <view class="pf-link"><view class="pf-link-icon dark">🎖️</view><text class="pf-link-label">我的 MVP</text><text class="pf-link-arrow">➡️</text></view>
+      <view class="pf-link"><view class="pf-link-icon gray">⚙️</view><text class="pf-link-label">设置</text><text class="pf-link-arrow">➡️</text></view>
+    </view>
+
+    <!-- 退出 -->
+    <button class="pf-logout">退出登录</button>
+  </view>
+</view>

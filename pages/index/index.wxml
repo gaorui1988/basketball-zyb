@@ -1,0 +1,35 @@
+<view class="index-page">
+  <header class="header safe-top">
+    <view class="header-left">
+      <view class="header-avatar">
+        <image class="header-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqvdmRV64H3MT45rcs0f5jyseIpyPtkg8grbzShk9BeWeboEVVACX8D4XwR_emEqtBU13QOMY0muC1RQoI49ixsWRULmzy5ENckkmasp1IXjgGPzVdn3QqM5NIVkKzMcdBXyExMe5D6Rim9t9d3Q2hcvn7WksgFLQp_Nv81-cvR6ay57H_MiM2oF8AsiGoRUs8ZBytCEbmqPeYR1xODbgfj6fyJU-McnpvPn0oINIGsrhYzVCmyxqEC0Onu4m6NpRFj6a7SZHG-sHk" />
+      </view>
+      <text class="header-title">组一波</text>
+    </view>
+    <view class="header-points">
+      <text class="header-points-icon">⭐</text>
+      <text class="header-points-text">1250 积分</text>
+    </view>
+  </header>
+
+  <view class="index-content">
+    <!-- 筛选 Tabs -->
+    <view class="filter-tabs">
+      <view class="filter-tab {{activeTab === 'all' ? 'active' : ''}}" bindtap="switchTab" data-tab="all">
+        <text class="filter-tab-text">全部活动</text>
+        <view wx:if="{{activeTab === 'all'}}" class="filter-tab-indicator"></view>
+      </view>
+      <view class="filter-tab {{activeTab === 'mine' ? 'active' : ''}}" bindtap="switchTab" data-tab="mine">
+        <text class="filter-tab-text">我的报名</text>
+        <view wx:if="{{activeTab === 'mine'}}" class="filter-tab-indicator"></view>
+      </view>
+    </view>
+
+    <!-- 活动列表 -->
+    <view class="activity-list">
+      <block wx:for="{{filteredActivities}}" wx:key="id">
+        <activity-card activity="{{item}}" bind:click="onActivityClick"></activity-card>
+      </block>
+    </view>
+  </view>
+</view>
