@@ -1,6 +1,9 @@
 {
-  "description": "组一波 - 篮球约战小程序",
-  "packOptions": { "ignore": [], "include": [] },
+  "description": "\u7ec4\u4e00\u6ce2 - \u7bee\u7403\u7ea6\u6218\u5c0f\u7a0b\u5e8f",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
   "setting": {
     "bundle": false,
     "userConfirmedBundleSwitch": false,
@@ -32,14 +35,21 @@
     "useStaticServer": true,
     "showES6CompileOption": false,
     "checkInvalidKey": true,
-    "babelSetting": { "ignore": [], "disablePlugins": [], "outputPath": "" },
-    "useCompilerPlugins": ["typescript"]
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useCompilerPlugins": []
   },
   "compileType": "miniprogram",
   "libVersion": "3.7.8",
   "appid": "wx0000000000000000",
   "projectname": "basketball-zyb",
   "condition": {},
-  "editorSetting": { "tabIndent": "insertSpaces", "tabSize": 2 },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
   "simulatorPluginLibVersion": {}
 }
