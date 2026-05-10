@@ -8,7 +8,7 @@ Page({
   onLoad() {
     this.filterActivities()
   },
-  switchTab(e: WechatMiniprogram.TouchEvent) {
+  switchTab(e) {
     const tab = e.currentTarget.dataset.tab
     this.setData({ activeTab: tab }, () => this.filterActivities())
   },
@@ -17,7 +17,7 @@ Page({
     const list = MOCK_ACTIVITIES.filter(a => tab === 'all' || a.id === '4')
     this.setData({ filteredActivities: list })
   },
-  onActivityClick(e: WechatMiniprogram.TouchEvent) {
+  onActivityClick(e) {
     const activity = e.detail.activity
     if (activity.status === 'ended') {
       wx.navigateTo({ url: `/pages/match-detail/index?activityId=${activity.id}` })

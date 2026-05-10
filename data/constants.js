@@ -1,5 +1,3 @@
-// 类型定义
-type ActivityStatus = 'registering' | 'upcoming' | 'full' | 'ended'
 
 // Mock 排行榜
 const MOCK_LEADERBOARD = [

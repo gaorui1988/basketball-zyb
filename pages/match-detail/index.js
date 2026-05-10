@@ -6,7 +6,7 @@ Page({
     result: null as any,
     participants: [] as any[]
   },
-  onLoad(options: { activityId?: string }) {
+  onLoad(options) {
     const id = options.activityId || '4'
     const activity = MOCK_ACTIVITIES.find(a => a.id === id)
     if (activity && activity.matchResult) {

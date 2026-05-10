@@ -7,7 +7,7 @@ Page({
     progress: 0,
     emptySlots: [] as number[]
   },
-  onLoad(options: { activityId?: string }) {
+  onLoad(options) {
     const id = options.activityId || '1'
     const activity = MOCK_ACTIVITIES.find(a => a.id === id) || MOCK_ACTIVITIES[0]
     const progress = (activity.joinedPlayersCount / activity.maxPlayersCount) * 100
