@@ -1,4 +1,4 @@
-import { Activity, LeaderboardEntry } from './types';
+import { Activity, LeaderboardEntry } from '../types'
 
 export const MOCK_LEADERBOARD: LeaderboardEntry[] = [
   {
@@ -66,7 +66,7 @@ export const MOCK_LEADERBOARD: LeaderboardEntry[] = [
     pts: 1050,
     mvpCount: 4
   }
-];
+]
 
 export const MOCK_ACTIVITIES: Activity[] = [
   {
@@ -87,7 +87,7 @@ export const MOCK_ACTIVITIES: Activity[] = [
       position: 'SF / 小前锋',
       mvpCount: 12
     },
-    rules: '“半场 4V4, 先到11分换人。尊重裁判，杜绝脏动作。”',
+    rules: '"半场 4V4, 先到11分换人。尊重裁判，杜绝脏动作。"',
     players: [
       { id: 'p1', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAYlEjovDEAdQOwbRXY8Gpez7YCeSbqsz6QRyRe991l4BxaZHen2TJKkLYgg1u4O3N62enG1fY6AOQR4ON6QA9kXWaf7hUacOF13wuuN1Fe4-hSETjxDdHh32WVzsbPaHX8s-mw4yfrnnniQNA7FHi6Fh5oZxP9YZgOWFhS8Emh8lyHnIldEAHX9Lfpxa3f7vvTYQUlvAXYeEmKSI01SnID0sh0H6-yMMVA9pmESldVINVd_KV1lvSlG_WAlT8N37AA45AeVjOAV3b6', name: '李磊' },
       { id: 'p2', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDCUUFJvI68G1uiida0XEhS1ItYZz6fizMwyAc24Epn7xx8XnvVzkjgwaq8pTsOiZDsffoNxZF9M2V9CstOlyQxFBAeNhZ52j3dFc3C21-4hDjqhZAPsnHEm6L97ne1r-H-PxcU0wCCoonMYvuKcLRhjAo9DO1C37uMTf2bh7fhkX42gOtToDNpa4mojWB6P6farPUyFDmhsDnneXLTZBv7eNB5jkgOfoUmyvsggqvz7RPOcbYDs-ERvMLB7MTF2s1C6lXwAXH77vNi', name: '张伟' },
@@ -105,7 +105,7 @@ export const MOCK_ACTIVITIES: Activity[] = [
     maxPlayersCount: 10,
     players: [
       { id: 'p4', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA6Bzs138pKJUAEcWXYAWpeM73z3W4JNMeROvCFOesJKd9F3Jki50YLUSt9zoj54-Ax0iY9rzxNKLTfASUGdwOUx2xllecSgBo0ts4WlP8feEGBwlShzhpM06Ds6IFSNC3EqlX-PvijIxRjEiCLwsRyZ0w5cGmI7sRtYZIdDDwJt7QvWjl3XqS7DYemzO6ZMdILVhxjP6ITCvi7Z78geb7gYj3NBnjqKIGBf5NAYjv5zqibxB4DOq_ZFOBzYiILZ883klgxJaWV0lUj', name: '王大壮' },
-      { id: 'p5', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkt83a118U2ME4L61dIa-AdlAI8OglVHMho1pbyGrWuLLWHj5TvD71X0sImiVWHsUssFEt7_Rk9X6U6s8dp_j09-RQWfPLZrS41157gMqH1imDwGTsXNTv21CYHQWUhAnDvpldMZgFGtrxXWczuKE8tAEktvERHP4KCsMAG-qeR-EkIbx_26XjwxKnjJuDS-n_WUWxT3muh2xiK6qtg-Ay53JaRAbwHbDxEXkB3XKONgwQJJC2CPem7xynnL6hSNdSHFLkYhzqy1Y1', name: '李阿狗' },
+      { id: 'p5', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDkt83a118U2ME4L61dIa-AdlAI8OglVHMho1pbyGrWuLLWHj5TvD71X0sImiVWsUssFEt7_Rk9X6U6s8dp_j09-RQWfPLZrS41157gMqH1imDwGTsXNTv21CYHQWUhAnDvpldMZgFGtrxXWczuKE8tAEktvERHP4KCsMAG-qeR-EkIbx_26XjwxKnjJuDS-n_WUWxT3muh2xiK6qtg-Ay53JaRAbwHbDxEXkB3XKONgwQJJC2CPem7xynnL6hSNdSHFLkYhzqy1Y1', name: '李阿狗' },
     ]
   },
   {
@@ -134,7 +134,7 @@ export const MOCK_ACTIVITIES: Activity[] = [
     matchResult: {
       teamAScore: 21,
       teamBScore: 18,
-      teamAAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3u8ap41BRrKMQye-QnKHxfUNNWQDO72lVPLR17ktAsbzzNVz9JHZh7dxhrGecLPCo1GxJ3CXOYYZeJ_GJTCkCjCqc-mUYEEIsmTNuBZfps-Qfg0HfcXw3GsaCGuVhp2VMzw-hU7Y2jOyc9-3JWLDVC3htsz8_f6yDFvk-X_Vdy51ebupdc8fR_3-bQf8qAzcmLTFG2S5Mb9J2-rWZFXdA4GFEI-8okP9nhXSr3bwDaBLdVcJ6o95zB5CzwuFx0Ss8SnZa_MqzM2lH',
+      teamAAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3u8ap41BRrKMQye-QnKHxfUNNWQDO72lVPLR17ktAsbzzNVz9JH7zhdx7hrGecLPCo1GxJ3CXOYYZeJ_GJTCkCjCqc-mUYEEIsmTNuBZfps-Qfg0HfcXw3GsaCGuVhp2VMzw-hU7Y2jOyc9-3JWLDVC3htsz8_f6yDFvk-X_Vdy51ebupdc8fR_3-bQf8qAzcmLTFG2S5Mb9J2-rWZFXdA4GFEI-8okP9nhXSr3bwDaBLdVcJ6o95zB5CzwuFx0Ss8SnZa_MqzM2lH',
       teamBAvatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAAujxkmT6uNFr-3QeWlc374WMiy4r21H2Av7FljCwvJs6KLL4leHBMgc2gcksCSIsspFRUcMM_gdUza2mSq3fqffpsrqYKoKJjHOsA19DqEKFK4T4xdVdVITjnKY2Uz3Y8jRwYZZlUnQPGmYKcCIVeEwWfXAKWvnQLstkXd5tZiyyN-g2emWoetwDCslPZcEKU2aJF5cwtAS1qGosa0C82wvfAovnzMTsMgCrrqU_08vkCUJPJd5uZiIfNwhvpKqkh8K-bpAFLkvly',
       courtNo: '4号场地'
     },
@@ -162,4 +162,4 @@ export const MOCK_ACTIVITIES: Activity[] = [
       }
     ]
   }
-];
+]
